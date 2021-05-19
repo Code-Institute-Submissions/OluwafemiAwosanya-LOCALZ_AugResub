@@ -4,6 +4,7 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
@@ -24,6 +25,11 @@ def get_ads():
     return render_template("business.html", ads=ads)
 
 
+@app.route("/signup", methods=["GET", "POST"])
+def signup():
+    return render_template("signup.html")
+
+ 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
