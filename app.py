@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_ads")
 def get_ads():
-    ads = mongo.db.business.find()
+    ads = list(mongo.db.business.find())
     return render_template("business.html", ads=ads)
 
 
