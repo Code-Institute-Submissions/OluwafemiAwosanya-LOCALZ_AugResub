@@ -97,10 +97,11 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_task")
+@app.route("/place_ad")
 def place_ad():
-    return render_template("place_ad.html")
-
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("place_ad.html", categories=categories)
+     
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
