@@ -97,11 +97,24 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/place_ad")
+@app.route("/place_ad", methods=["GET", "POST"])
 def place_ad():
+    if request.method == "POST":
+        ad = {
+            "category_name": request.form.get("category_name"),
+            "ad_name": request.form.get("ad_name"),
+            "ad_description": request.form.get("ad_description"),
+            "ad_address": request.form.get("ad_address"),
+            "ad_telephone": request.form.get("ad_telephone"),
+            "created_by": session["user"]
+        }
+        mongo.db.business.insert_one(ad)
+        flash("Ad Successfully Added")
+        return redirect(url_for("get_ads"))
+        
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("place_ad.html", categories=categories)
-     
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

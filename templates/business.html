@@ -1,24 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
 
+  <h3 class="cyan-text text-darken-4 center-align">All Ads</h3>
 
     <div class="row">
         {% for ad in ads %}
-        <div class="col s12 m6">
-          <div class="card  cyan darken-2 darken-1">
-            <div class="card-content white-text">
-              <h3><strong>  {{ ad.business_name }} </strong></h3><br>
-              <h6>  {{ ad.category_name }} </h6><br>
-              <p>  {{ ad.business_description }} </p><br>
-              <p>  {{ ad.address }} </p><br>
+          <div class="col s12 m6">
+            <div class="card  cyan darken-2 darken-1">
+              <div class="card-content white-text">
+                  <h3><strong>{{ ad.business_name }}</strong></h3>
+                  <h6>{{ ad.category_name }}</h6>
+                  <p>{{ ad.business_description }}</p>
+                  <p>{{ ad.address }}</p>
+              </div>
+              <h5 class="card-action">
+                  <a href="">{{ ad.phone_number }}</a>
+              </h5>
+              <p><em>by: {{ ad.created_by }}</em></p>
             </div>
-            <h5 class="card-action">
-              <a href="">{{ ad.phone_number }}</a>
-            </h5>
           </div>
-        </div>
         {% endfor %}
-      </div>
+    </div>
     
 
 {% endblock %}
