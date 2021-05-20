@@ -10,9 +10,13 @@
 				<div class="input-field col s12">
                     <i class="fas fa-folder-open prefix cyan-text text-darken-4"></i>
 					<select id="category_name" name="category_name" class="validate" required>
-                        <option value="" disabled selected>Choose Category</option>
+                        <option value="" disabled>Choose Category</option>
                         {% for category in categories %}
-                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% if category.category_name == ad.category_name %}
+                                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                            {% else %}
+                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
 					<label for="category_name">Business Category</label>
@@ -23,7 +27,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix cyan-text text-darken-4"></i>
                     <input id="ad_name" name="ad_name" minlength="5" maxlength="50"
-                        type="text" class="validate" required>
+                    value="{{ ad_name }}" type="text" class="validate" required>
                     <label for="ad_name">Business Name</label>
                 </div>
             </div>
@@ -32,7 +36,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix cyan-text text-darken-4"></i>
                     <textarea id="ad_description" name="ad_description" minlength="5"
-                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                        maxlength="200" class="materialize-textarea validate" required>{{ ad.ad_description }}</textarea>
                     <label for="ad_description">Business Description</label>
                 </div>
             </div>
@@ -41,7 +45,7 @@
                 <div class="input-field col s12">
                     <i class="fas fas fa-map-pin prefix cyan-text text-darken-4"></i>
                     <textarea id="ad_address" name="ad_address" minlength="5"
-                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                        maxlength="200" class="materialize-textarea validate" required>{{ ad.ad_address }}</textarea>
                     <label for="ad_address">Business Address</label>
                 </div>
             </div>
@@ -50,13 +54,17 @@
 				<div class="input-field col s12">
 					<i class="fas fa-phone prefix cyan-text text-darken-4"></i>
                     <textarea id="ad_telephone" name="ad_telephone" minlength="10"
-                        maxlength="15" class="materialize-textarea validate" required></textarea>
+                        maxlength="15" class="materialize-textarea validate" required>{{ ad.ad_telephone }}</textarea>
                     <label for="ad_telephone">Phone Number</label>
 				</div>
 			</div>
              <!-- submit button -->
              <div class="row">
                 <div class="col s12 center-align">
+                    <!-- cancel button -->
+                    <a href="{{ url_for('get_ads') }}" class="btn-large red text-shadow">
+                        Cancel <i class="fas fa-times-circle right"></i>
+                    </a>
                     <button type="submit" class="btn-large cyan darken-1 text-shadow">
                         Edit Ad <i class="fas fa-edit right"></i>
                     </button>
