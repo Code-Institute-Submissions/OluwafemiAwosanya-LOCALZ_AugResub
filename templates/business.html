@@ -3,13 +3,14 @@
 
   <h3 class="cyan-text text-darken-4 center-align">All Ads</h3>
 
-    <div class="row">
+    <ul class="row">
         {% for ad in ads %}
+        <li>
           <div class="col s12 m6">
             <div class="card  cyan darken-2 darken-1">
               <div class="card-content white-text">
-                  <h3><strong>{{ ad.business_name }}</strong></h3>
-                  <h6>{{ ad.category_name }}</h6>
+                  <h3>{{ ad.business_name }}</h3>
+                  <p>{{ ad.category_name }}</p>
                   <p>{{ ad.business_description }}</p>
                   <p>{{ ad.address }}</p>
               </div>
@@ -19,8 +20,9 @@
               <p><em>by: {{ ad.created_by }}</em></p>
             </div>
           </div>
+        </li>  
         {% endfor %}
-    </div>
+    </ul>
     
 
 {% endblock %}
