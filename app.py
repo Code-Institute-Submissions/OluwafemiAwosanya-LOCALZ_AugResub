@@ -128,11 +128,18 @@ def edit_ad(ad_id):
             "created_by": session["user"]
         }
         mongo.db.business.update({"_id": ObjectId(ad_id)}, submit)
-        flash("Task Successfully Updated")
+        flash("Ad Successfully Updated")
 
     ad = mongo.db.business.find_one({"_id": ObjectId(ad_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_ad.html", ad=ad, categories=categories)
+
+
+@app.route("/delete_ad/<ad_id>")
+def delete_ad(ad_id):
+    mongo.db.business.remove({"_id": ObjectId(ad_id)})
+    flash("Ad Successfully Deleted")
+    return redirect(url_for("get_ads"))
 
 
 if __name__ == "__main__":
