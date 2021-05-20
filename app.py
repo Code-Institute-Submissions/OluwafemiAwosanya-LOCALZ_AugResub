@@ -25,6 +25,13 @@ def get_ads():
     return render_template("business.html", ads=ads)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    ads = list(mongo.db.business.find({"$text": {"$search": query}}))
+    return render_template("business.html", ads=ads)
+
+
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
     if request.method == "POST":
@@ -61,9 +68,9 @@ def login():
             # ensure hashed password matches user input
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(request.form.get("username")))
-                    return redirect(url_for("profile", username=session["user"]))
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(request.form.get("username")))
+                return redirect(url_for("profile", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
