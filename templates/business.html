@@ -7,18 +7,20 @@
         {% for ad in ads %}
         <li>
           <div class="col s12 m6">
-            <div class="card  cyan darken-2 darken-1">
-              <div class="card-content white-text">
-                  <h3>{{ ad.business_name }}</h3>
-                  <p>{{ ad.category_name }}</p>
-                  <p>{{ ad.business_description }}</p>
-                  <p>{{ ad.address }}</p>
-              </div>
-              <h5 class="card-action">
-                  <a href="">{{ ad.phone_number }}</a>
-              </h5>
-              <p><em>by: {{ ad.created_by }}</em></p>
-            </div>
+                <div class="card  cyan darken-2 darken-1">
+                  <a href="" class="btn-small right green accent-4">Done</a>
+                  <a href="" class="btn-small right amber lighten-1">Edit</a>
+                    <div class="card-content white-text">
+                        <h3>{{ ad.business_name }}</h3>
+                        <p>{{ ad.category_name }}</p>
+                        <p>{{ ad.business_description }}</p>
+                        <p>{{ ad.address }}</p>
+                    </div>
+                    <h5 class="card-action">
+                        <a href="">{{ ad.phone_number }}</a>
+                    </h5>
+                    <p><em>by: {{ ad.created_by }}</em></p>
+                </div>
           </div>
         </li>  
         {% endfor %}
