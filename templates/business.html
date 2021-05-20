@@ -7,8 +7,10 @@
         {% for ad in ads %}
           <div class="col s12 m6">
                 <div class="card  cyan darken-2 darken-1">
-                  <a href="" class="btn-small right green accent-4">Done</a>
-                  <a href="{{ url_for('edit_ad', ad_id=ad._id) }}" class="btn-small right amber lighten-1">Edit</a>
+                  {% if session.user|lower == ad.created_by|lower %}
+                    <a href="" class="btn-small right green accent-4">Done</a>
+                    <a href="{{ url_for('edit_ad', ad_id=ad._id) }}" class="btn-small right amber lighten-1">Edit</a>
+                  {% endif %}
                     <div class="card-content white-text">
                         <h3>{{ ad.business_name }}</h3>
                         <p>{{ ad.category_name }}</p>

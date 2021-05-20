@@ -118,7 +118,19 @@ def place_ad():
 
 @app.route("/edit_ad/<ad_id>", methods=["GET", "POST"])
 def edit_ad(ad_id):
-    ad = mongo.db.tasks.find_one({"_id": ObjectId(ad_id)})
+    if request.method == "POST":
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "ad_name": request.form.get("ad_name"),
+            "ad_description": request.form.get("ad_description"),
+            "ad_address": request.form.get("ad_address"),
+            "ad_telephone": request.form.get("ad_telephone"),
+            "created_by": session["user"]
+        }
+        mongo.db.business.update({"_id": ObjectId(ad_id)}, submit)
+        flash("Task Successfully Updated")
+
+    ad = mongo.db.business.find_one({"_id": ObjectId(ad_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_ad.html", ad=ad, categories=categories)
 
