@@ -52,7 +52,7 @@ def signup():
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
-        return redirect(url_for("profile", username=session["user"]))
+        return redirect(url_for("get_ads", username=session["user"]))
 
     return render_template("signup.html")
 
@@ -70,7 +70,7 @@ def login():
                 existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(request.form.get("username")))
-                return redirect(url_for("profile", username=session["user"]))
+                return redirect(url_for("get_ads", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
