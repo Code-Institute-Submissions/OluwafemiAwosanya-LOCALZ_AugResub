@@ -75,13 +75,24 @@ The ideal visitors to this website are;
 <!--Testing-->
 ## Testing
 
+*   As an unregisterd user, I can view all ads on the app.
+*   As an unregistered user, I can search for a service or business on the app.
+*   As an unregistered user, I can call the number provided on ad cards straight from the app.
+*   As a business owner, I can register on the app.
+*   As a business owner, I can place an ad on the app after registration.
+*   As a registered user, I can view my existing ads and new ads.
+*   As a registered user, I can edit or delete my existing ads.
+*   As an admin user, I can view all ads on the app.
+*   As an Admin user, I can add or delete Ad categories.
+
+
 * I tested the website on the following browsers;
     * Chrome
     * Edge
     * Firefox
     * Safari
 
-The user experience on all listed browsers is satisfying
+The user experience on all listed browsers is satisfying.
 
 ### Bugs
 *   Ads placed were written to DB but not displayed on web page.
