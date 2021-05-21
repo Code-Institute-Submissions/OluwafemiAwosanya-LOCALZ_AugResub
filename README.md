@@ -42,15 +42,7 @@ The ideal visitors to this website are;
 
 **Wireframe**
 
-[Home](https://github.com/)
-
-[Log in](https://github.com/)
-
-[Sign up](https://github.com/)
-
-[Place ad](https://github.com/)
-
-[Manage Categories](https://github.com/)
+[Localz](https://github.com/OluwafemiAwosanya/LOCALZ/blob/master/static/localz_wf.pdf)
 
 
 <!--Technologies Used-->
