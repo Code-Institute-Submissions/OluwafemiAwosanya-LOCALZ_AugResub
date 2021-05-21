@@ -9,6 +9,13 @@
 .btn-small {
     margin: 2px;
 }
+
 .fa-phone{
     color: white;
+}
+
+footer{
+    line-height: 4px;
+    background-color:rgb(66, 209, 209);
+    padding: 4px;
 }
