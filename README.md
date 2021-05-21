@@ -21,6 +21,7 @@ Businesses and service providers within localities can list their businesses and
 *   Log Out: logged in users can exit.
 *   Sign Up: New business can register to start listing their services.
 *   Place Ads: Registerd users can place new ads.
+*   Manage Categories: Enable Admin user to add or delete categories.
 **Web layout**
 Simple well laid out Home page, accessible to all users (service providers and service users) with a search bar for a quick search of listings .
 
@@ -44,8 +45,6 @@ The ideal visitors to this website are;
 [Home](https://github.com/)
 
 [Log in](https://github.com/)
-
-[Log out](https://github.com/)
 
 [Sign up](https://github.com/)
 
