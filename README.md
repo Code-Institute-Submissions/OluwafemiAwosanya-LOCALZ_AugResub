@@ -3,33 +3,41 @@
 **version 1.0.0.**
 
 Localz is a platform that connects local businesses to customers.
-Business and service providers within localities can list their businesses and services on Localz where potential customers can see and reachout to them.
+Businesses and service providers within localities can list their businesses and services on Localz where potential customers can see and reachout to them.
 
 **Business goals of this website**
 * Build brand awareness.
-* Showcase local business and services.
-* Be the go to website for local business search and listings.
+* Showcase local businesses and services.
+* Be the go to website for local businesses search and listings.
 
 **Customer goals for this website**
 * Looking for a certain service provider within my locality.
 * Have a need to advertise a business.
-* 
-* 
 
 <!--UX-->
 ## UX
+*   Home : All business listings appear on this page for all users.
+*   Log In: Registered users can sign in to the platform to edit existing ads or place new ones.
+*   Log Out: logged in users can exit.
+*   Sign Up: New business can register to start listing their services.
+*   Place Ads: Registerd users can place new ads.
 **Web layout**
+Simple well laid out Home page, accessible to all users (service providers and service users) with a search bar for a quick search of listings .
 
+Each listing is placed on a card with business name, descriptions, address and phone numbers with a link for easy dial, especially for users accessing the platform via mobile phone.
 
+To place an ad on the platform, user needs to be registerd, i.e. place ad tab is not visible to all users except registered users.
+
+There is a Manage categories page which is only accessible to admin user.
+username: Admin
+password: Admin
 
 **Prospective website users**
 
 The ideal visitors to this website are;
 
-* Any web user in need of a certain services .
+* Any web user in need of a certain services  within locality.
 * Business owner looking to reach a wider audience.
-
-
 
 **Wireframe**
 
@@ -37,17 +45,13 @@ The ideal visitors to this website are;
 
 [Log in](https://github.com/)
 
+[Log out](https://github.com/)
+
 [Sign up](https://github.com/)
 
 [Place ad](https://github.com/)
 
-
-<!--Features-->
-## Features
-
-
-
-
+[Manage Categories](https://github.com/)
 
 
 <!--Technologies Used-->
@@ -65,24 +69,11 @@ The ideal visitors to this website are;
 * GitPod
 * GitHub
 * Chrome DevTools
-* Google Maps API   
 * Balsamiq wireframe 
 * Lighthouse    
 
 <!--Testing-->
 ## Testing
-
-### Functional Testing
-
-
-
-### Usability Testing
-
-
-
-
-
-### Compatibility Testing
 
 * I tested the website on the following browsers;
     * Chrome
@@ -92,13 +83,9 @@ The ideal visitors to this website are;
 
 The user experience on all listed browsers is satisfying
 
-
-
-
 ### Bugs
-
-
-
+*   Ads placed were written to DB but not displayed on web page.
+    *   I re-wrote the code on the ad card and that was fixed.
 
 <!--Deployment-->
 ## Deployment
@@ -107,15 +94,20 @@ The user experience on all listed browsers is satisfying
 
 The website has been deployed with the following steps;
 
-* Log in on GitHub
-* Click on the repository you need to deploy
-* Go on "Settings"
-* Scroll down the page until you find the "GitHub pages" section
-* On "source" click on "none"
-* Select "master branch" from the dropdown menu
-* The page re-loads automatically
-* Scroll down again to "GithHub pages" section
-* You will now find a link that says "Your site is published at ..."
+* Create Procfile and requirements.txt file and push to github
+* Log in on Heroku
+* Click on Create a New App with project Name
+* Click connect to Github button
+* Add github repository name and click search
+* ensure Heroku validates your entry and click connect
+* Scroll up the page and click settings
+* Select reveal config Vars
+* Add variables from env.py file
+* Back to Deploy tab
+* Scroll down and click enable automatic deployment
+* Click Deploy branch for Heroku to receive the codes from Github
+* You will now find a link that says "Your app was successfully deployed " view tab
+* Click the view tab to see live app.
 
 ### Fork the code 
 
@@ -141,23 +133,10 @@ To make a local clone of this website, follow these steps;
 * Type git clone followed by the previously copied HTTPS link
 * Press Enter
 
-<!--Credits-->
-## Credits
-### Content
-
-
-
-### Media
-
-
-
-### Code
-
-
 
 ### Acknowledgements
 
-
+Thanks to Spence Barriball for guidance and Freecode camp channel on youtube.
 
 <!--Copyright-->
 ## Copyright
