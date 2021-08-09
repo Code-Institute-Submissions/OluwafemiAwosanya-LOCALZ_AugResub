@@ -53,8 +53,8 @@
 			<div class="row">
 				<div class="input-field col s12">
 					<i class="fas fa-phone prefix cyan-text text-darken-4"></i>
-                    <textarea id="ad_telephone" name="ad_telephone" minlength="10"
-                        maxlength="15" class="materialize-textarea validate" required>{{ ad.ad_telephone }}</textarea>
+                    <input id="ad_telephone" name="ad_telephone" minlength="8" maxlength="12"
+                    value="{{ ad.ad_telephone }}" type="number" class="validate" required>
                     <label for="ad_telephone">Phone Number</label>
 				</div>
 			</div>
