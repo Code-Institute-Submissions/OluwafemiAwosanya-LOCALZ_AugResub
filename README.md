@@ -1,145 +1,214 @@
-<!--Project Name-->
-# Localz
-**version 1.0.0.**
 
-Localz is a platform that connects local businesses to customers.
-Businesses and service providers within localities can list their businesses and services on Localz where potential customers can see and reachout to them.
+## Table of Contents
+* [Purpose](#Purpose)
+* [User Experience Design (UX)](#User-Experience-Design)
+  * [User stories](#User-Stories)
+    * [First Time Visitor Goals](#First-Time-Visitor-Goals)
+    * [Returning Visitor Goals](#Returning-Visitor-Goals)
+    * [Frequent User Goals](#Frequent-User-Goals)
+  * [Structure](#Structure)
+  * [Design](#Design)
+    * [Colour Scheme](#Colour-Scheme)
+    * [Typography](#Typography)
+    * [Imagery](#Imagery)
+    * [Wireframes](#Wireframes)
+    * [Differences to Design](Differences-to-Design)
+* [Limitations](#Limitations)
+- [Features](#Features)
+    * [Existing Features](#Existing-Features)
+    * [Future Features](#Features-Left-to-Implement)
+* [Technologies](#Technologies)
+* [Testing](#Testing)
+    * [Test Strategy](#Test-Strategy)
+      * [Summary](#Summary)
+      * [High Level Test Cases](#High-Level-Test-Cases)
+      * [Out of Scope](#Out-of-Scope)
+    * [Test Results](#Test-Results)
+    * [Testing Issues](#Issues-and-Resolutions-to-issues-found-during-testing)
+* [Deployment](#Deployment)
+    * [Project Creation](#Project-Creation)
+    * [Project Deployment](#Using-Heroku)
+    * [Locally](Run-Locally)
+* [Credits](#Credits)
+  * [Content](#Content)
+  * [Media](#Media)
+  * [Acknowledgements](#Acknowledgements)
+  * [Comments](#Comments)
 
-**Business goals of this website**
-* Build brand awareness.
-* Showcase local businesses and services.
-* Be the go to website for local businesses search and listings.
+# Milestone Project 3
+## Purpose
+This Website was created for the sole purpose of completing the third Milestone Project for the Code Institute's Full Stack Developer course. 
+It was built using the knowledge gained from the HTML, CSS, Javascript, Python+Flask and Backend Development with the Flask framework modules.
+A full list of technologies used can be found in the technologies section of this document.
 
-**Customer goals for this website**
-* Looking for a certain service provider within my locality.
-* Have a need to advertise a business.
+The live website can be found [here](https://localz-fm.herokuapp.com/).
 
-<!--UX-->
-## UX
-*   Home : All business listings appear on this page for all users.
-*   Log In: Registered users can sign in to the platform to edit existing ads or place new ones.
-*   Log Out: logged in users can exit.
-*   Sign Up: New business can register to start listing their services.
-*   Place Ads: Registerd users can place new ads.
-*   Manage Categories: Enable Admin user to add or delete categories.
-**Web layout**
-Simple well laid out Home page, accessible to all users (service providers and service users) with a search bar for a quick search of listings .
+## Localz Responsive Website
 
-Each listing is placed on a card with business name, descriptions, address and phone numbers with a link for easy dial, especially for users accessing the platform via mobile phone.
+![Website Mock Up](media/ms4_mockup.PNG)
 
-To place an ad on the platform, user needs to be registerd, i.e. place ad tab is not visible to all users except registered users.
+Localz was built to connect local business and service providers to customers within  their localities and beyond.
+Business and service providers can list their businesses and services on Localz where potential customers can see and reachout to them.
 
-There is a Manage categories page which is only accessible to admin user.
-username: Admin
-password: Admin
+*** 
+## User Experience Design
 
-**Prospective website users**
+### User stories
+#### Regular Visitor Goals
+* As a website visitor, I want to easily understand the essence of the site and learn more about the    offerings.
+* As a website visitor, I want to be able to easily search the website for a business or service within my locality.
+* As a website visitor, I want to be able to navigate the website to see listed ads if I choose not to search for specifics.
+* As a website visitor, I want to view the website and content clearly on my mobile device.
+* As a website visitor, I want to be able to contact the business or service provider from the details on website.
+#### Business Visitor Goals
+* As a local business or service provider, I want to be able to register on the website.
+* As a local business or service provider, I want to be able to login on the website with my registerd details.
+* As a local business or service provider, I want to be able to list my business or services on the website.
+* As a local business or service provider, I want to be able to manage i.e. edit or delete my listed business ads.
+* As a local business or service provider, I want to be able to logout securely on the website after use.
+#### Admin Visitor Goals
+* As a website Admin user, I want to be able to add or delete categories of ads on the website.
+* As a website Admin user, I want to be able to manage ads on the website, i.e. delete ads that are deemed inapropriate for the website.
+### Structure
+All Pages will contain a Navigation menu at the top of the Webpage that directs them to a new Page to easily allow users to Navigate the site easily.
+The Nav Menu will be collapsable on a Mobile device to make use of space on smaller devices.
+The purpose of this is to fulfill user story:
+> As a website visitor, I want to be able to easily navigate throughout the site to see listed ads.
 
-The ideal visitors to this website are;
 
-* Any web user in need of a certain services  within locality.
-* Business owner looking to reach a wider audience.
+Custom CSS and/or Materialize Css will be used to make the Website responsive by the use of media queries and/or the Boostrap Grid system.
 
-**Wireframe**
+All pages will be responsive and the layouts will change dependant on screen size. This is to ensure content flow is appealing,
+images are displayed properly and that the content is not shrunk side by side, so small that it is unreadable.
+The purpose of this is to fulfill user story:
+> As a website visitor, I want to view the website and content clearly on my mobile device.
 
+### Design
+#### Colour Scheme
+The two main colours are
+#### Typography
+Roboto font is used throughout the project.
+
+#### Wireframes
 [Localz](https://github.com/OluwafemiAwosanya/LOCALZ/blob/master/static/localz_wf.pdf)
 
 
-<!--Technologies Used-->
-## Technologies Used
-* HTML5
-* CSS3
-* Materialize-css 1.0.0.
-* MongoDB
-* Python + Flask
-* Javascript
-* Heroku
-* Font Awesome 5.15.3.
-* jQuery
-* Git
-* GitPod
-* GitHub
-* Chrome DevTools
-* Balsamiq wireframe 
-* Lighthouse    
+## Features
+ 
+### Existing Features
+- User Signup
+- User login 
+- User ad management
+- User logout 
+- User authentication
 
-<!--Testing-->
+### Features Left to Implement
+- Geolocation feature to enable user search business and services within a certain radius.
+- Feedback channel from users on services provided i.e. rating feature.
+- Monetise Ad listings i.e. Add payment feature enabled by stripe at signup or place ad page, depends what model I settle on subscription or per ad charge.
+***
+## Technologies
+
+* HTML
+	* This project uses HTML as the main language used to complete the structure of the Website.
+* CSS
+	* This project uses custom written CSS to style the Website.
+* Javascript
+    * This project uses javascript to enhance the dynamism and responsiveness of the website
+* Python+Flask
+    * This project is built on Python-Flask Frameworks
+* MongoDB
+    * This project uses MongoDB as database
+* [Materialize Css 1.0.0](https://materializecss.com/)
+	* The Materialize framework is used throughout this website for layouts and styling. 
+* [Font Awesome](https://fontawesome.com/)
+	* Font awesome Icons are used for the Ad menu icons.
+* [Google Fonts](https://fonts.google.com/)
+	* Google fonts are used throughout the project to import the  fonts.
+* [Gitpod](https://gitpod.io/)
+	* Gitpod is the Integrated Development Environment used to develop the Website.
+* [GitHub](https://github.com/)
+	* GithHub is the hosting site used to store the source code for the Website and [Git Pages](https://pages.github.com/) is used for the deployment of the live site.
+* [Git](https://git-scm.com/)
+	* Git is used as version control software to commit and push code to the GitHub repository where the source code is stored.
+* [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
+	* Google chromes built in developer tools are used to inspect page elements and help debug issues with the site layout and test different CSS styles.
+* [balsamiq Wireframes](https://balsamiq.com/wireframes/)
+	* This was used to create wireframes for 'The Skeleton Plane' stage of UX design.
+* [Techsini](http://techsini.com/multi-mockup/index.php)
+    * tecnisih.com Multi Device Website Mockup Generator was used to create the Mock up image in this README
+
+***
 ## Testing
 
-*   As an unregisterd user, I can view all ads on the app.
-*   As an unregistered user, I can search for a service or business on the app.
-*   As an unregistered user, I can call the number provided on ad cards straight from the app.
-*   As a business owner, I can register on the app.
-*   As a business owner, I can place an ad on the app after registration.
-*   As a registered user, I can view my existing ads and new ads.
-*   As a registered user, I can edit or delete my existing ads.
-*   As an admin user, I can view all ads on the app.
-*   As an Admin user, I can add or delete Ad categories.
+### Test Strategy 
+
+#### Summary 
+
+Testing is required on MilestoneProject-3 – Localz Website to ensure all features are working correctly to serve the end users well as intended.
+
+All Features were tested on different screen sizes and devices and all to testers satisfactions.
 
 
-* I tested the website on the following browsers;
-    * Chrome
-    * Edge
-    * Firefox
-    * Safari
+The live Project can be found [here](https://localz-fm.herokuapp.com/).</br>
+#### High Level Test Cases 
+![Test Cases](static/localz_tp.PNG)
+ 
 
-The user experience on all listed browsers is satisfying.
+### Test Results
+All Pages were run through the [W3C HTML Validator](https://validator.w3.org/) and showed no errors.<br>
+CSS Stylesheet was run through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator) and showed no errors.<br>
+All Python codes were run through the [Pep8online checker](http://pep8online.com/) and satisifies PEP8 compliance.
+Website was tested by running locally and tested on the deployed version. No differences found.
 
-### Bugs
+
+### Issues and Resolutions to issues found during testing
 *   Ads placed were written to DB but not displayed on web page.
     *   I re-wrote the code on the ad card and that was fixed.
 
-<!--Deployment-->
 ## Deployment
 
-### GitHub pages
+### Project Creation
+The project was started by navigating to the [template](https://github.com/Code-Institute-Org/gitpod-full-template) and clicking 'Use this template'. Under Repository name I input LOCALZ and checked the Include all branches checkbox. I then navigated to the new [repository](https://github.com/OluwafemiAwosanya/LOCALZ) and clicked the Gitpod extension button on my Github to open the Gitpod editor.
 
-The website has been deployed with the following steps;
+The following commands were used throughout the project:
 
-* Create Procfile and requirements.txt file and push to github
-* Log in on Heroku
-* Click on Create a New App with project Name
-* Click connect to Github button
-* Add github repository name and click search
-* ensure Heroku validates your entry and click connect
-* Scroll up the page and click settings
-* Select reveal config Vars
-* Add variables from env.py file
-* Back to Deploy tab
-* Scroll down and click enable automatic deployment
-* Click Deploy branch for Heroku to receive the codes from Github
-* You will now find a link that says "Your app was successfully deployed " view tab
-* Click the view tab to see live app.
+* git add filename - This command was used to add files to the staging area before commiting.
+* git commit -m "commit message explaining the updates" - This command was used to to commit changes to the local repository.
+* git push - This command is used to push all commited changes to the GitHub repository. 
 
-### Fork the code 
+### Project Deployment
+The Project was deployed for hosting on [Heroku](https://heroku.com) with the following steps;
 
-To work on this code on your own, follow these steps;
+1. I created Heroku App for the project 
+2. Connected Git Remote
+3. Added required packages to requirements.txt
+4. Freeze requirements.txt
+5. Added Procfile with Capital 'P'
+6. Deployed code to Heroku
+7. Enable Automatic Deploy in Heroku
 
-* Log in on GitHub
-* Find the project repository
-* On the top-right of the page, you will find a button with the name "Fork"
-* Click on it and it will automatically fork the code to your GitHub
 
-### Local Clone
+### Run Locally
+1. Navigate to the GitHub [Repository:](https://github.com/OluwafemiAwosanya/LOCALZ)
+2. Click the Code drop down menu.
+3. Either Download the ZIP file, unpackage locally and open with IDE (This route ends here) OR Copy Git   URL from the HTTPS dialogue box.
+4. Open your developement editor of choice and open a terminal window in a directory of your choice.
+5. Use the 'git clone' command in terminal followed by the copied git URL.
+6. A clone of the project will be created locally on your machine.
 
-To make a local clone of this website, follow these steps;
+***
+## Credits
+### Code
 
-* Log in on GitHub
-* Find the Project repository
-* Locate a button with the name "code"
-* Click on the "code" button
-* On the dropdown selection,you will find a link to clone the code with HTTPS
-* Copy the HTTPS link
-* Open Git bash
-* Open the directory you want to work on the cloned code 
-* Type git clone followed by the previously copied HTTPS link
-* Press Enter
+### Content
+The content of this software was created by Oluwafemi Awosanya with guidance from the Code Institute video lectures, Youtube videos and My Mentor Spencer Barriball
 
 
 ### Acknowledgements
+I'd like to thank my mentor Spencer Barriball for his guidance throughout this project.<br>
+Thanks to YouTube pages like Traversy Media, Techworld with Nana and Codemy, freecodecamp, their resources has been of immense help.<br>
+I'd like to give a special mention to all Code Institute Tutors and the Code Institute Slack Community for a great learning experience in the last 12 months.<br>
 
-Thanks to Spence Barriball for guidance and Freecode camp channel on youtube.
-
-<!--Copyright-->
 ## Copyright
 © Localz 2021
