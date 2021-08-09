@@ -106,6 +106,7 @@ Roboto font is used throughout the project.
 - Geolocation feature to enable user search business and services within a certain radius.
 - Feedback channel from users on services provided i.e. rating feature.
 - Monetise Ad listings i.e. Add payment feature enabled by stripe at signup or place ad page, depends what model I settle on subscription or per ad charge.
+- Admin user ability to delete ads from front-end
 ***
 ## Technologies
 
