@@ -12,6 +12,11 @@
     width: 100%;
 }
 
+.category-card {
+    height: 200px;
+    margin: 10px;
+}
+
 
 .btn-small {
     margin: 2px;
