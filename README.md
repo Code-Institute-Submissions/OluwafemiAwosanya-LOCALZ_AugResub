@@ -85,7 +85,7 @@ The purpose of this is to fulfill user story:
 
 ### Design
 #### Colour Scheme
-The two main colours are
+The main colours used are white, blue, cyan, red and amber.
 #### Typography
 Roboto font is used throughout the project.
 
