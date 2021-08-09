@@ -44,7 +44,7 @@ The live website can be found [here](https://localz-fm.herokuapp.com/).
 
 ## Localz Responsive Website
 
-![Website Mock Up](media/ms4_mockup.PNG)
+![Website Mock Up](static/localz_mockup.PNG)
 
 Localz was built to connect local business and service providers to customers within  their localities and beyond.
 Business and service providers can list their businesses and services on Localz where potential customers can see and reachout to them.
