@@ -10,7 +10,6 @@
   * [Design](#Design)
     * [Colour Scheme](#Colour-Scheme)
     * [Typography](#Typography)
-    * [Imagery](#Imagery)
     * [Wireframes](#Wireframes)
     * [Differences to Design](Differences-to-Design)
 * [Limitations](#Limitations)
@@ -25,13 +24,13 @@
       * [Out of Scope](#Out-of-Scope)
     * [Test Results](#Test-Results)
     * [Testing Issues](#Issues-and-Resolutions-to-issues-found-during-testing)
+* [DB Schema] (#DB-Schema)
 * [Deployment](#Deployment)
     * [Project Creation](#Project-Creation)
     * [Project Deployment](#Using-Heroku)
     * [Locally](Run-Locally)
 * [Credits](#Credits)
   * [Content](#Content)
-  * [Media](#Media)
   * [Acknowledgements](#Acknowledgements)
   * [Comments](#Comments)
 
@@ -166,6 +165,25 @@ Website was tested by running locally and tested on the deployed version. No dif
 ### Issues and Resolutions to issues found during testing
 *   Ads placed were written to DB but not displayed on web page.
     *   I re-wrote the code on the ad card and that was fixed.
+
+*   Edit ad page failed to display ad title.
+    *   I updated the ad title jinja and that was fixed.
+
+## DB Schema
+* The following tables were created in MongoDb with respective fields;
+    * Business
+        * category_name
+        * ad_name
+        * ad_description
+        * ad_address
+        * ad_telephnoe
+        * created_by
+    * Categories
+        * category_name
+    * Users
+        * username
+        * password
+* All tables have objectId by default.
 
 ## Deployment
 
