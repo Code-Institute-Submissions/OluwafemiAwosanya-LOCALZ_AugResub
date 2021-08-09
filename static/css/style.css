@@ -6,6 +6,13 @@
     line-height: 2;
 }
 
+.card {
+    padding: 10px;
+    height:500px;
+    width: 100%;
+}
+
+
 .btn-small {
     margin: 2px;
 }

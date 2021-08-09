@@ -38,12 +38,13 @@
                       </div>
                       <div class="row">
                           <p class="fas fas fa-map-pin"> {{ ad.ad_address }} </p>
-                      </div>
-                      <div class="row">
-                          <h5 class="card-action fas fa-phone">
-                              <a href="{{ ad.ad_telephone }}">{{ ad.ad_telephone }}</a>
-                          </h5>
-                      </div>
+                      </div> 
+                  </div>
+
+                  <div class="row">
+                    <h5 class="card-action fas fa-phone">
+                        <a href="{{ ad.ad_telephone }}">{{ ad.ad_telephone }}</a>
+                    </h5>
                   </div>
                     
                     {% if session.user|lower == ad.created_by|lower %}
